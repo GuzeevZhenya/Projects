@@ -8,7 +8,8 @@
         Бюджет
     </title>
     <link rel="stylesheet" href="css/main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
@@ -44,19 +45,16 @@
     <div class="form-wrapper">
         <form class="form" id="budget-form" action="">
             <select id="input__type" class="form__input form__select" name="action" id="action">
-                    <option value="inc">+</option>
-                    <option value="exp">-</option>
-                </select>
-            <input id="input__description" class="form__input form__input--description" type="text" placeholder="Описание" />
+                <option value="inc">+</option>
+                <option value="exp">-</option>
+            </select>
+            <input id="input__description" class="form__input form__input--description" type="text"
+                placeholder="Описание" />
             <input id="input__value" class="form__input form__input--sum" type="number" placeholder="Сумма" />
             <button id="submit-btn" class="form__button">
-                    Добавить
-                    <img
-                        class="form__button-icon"
-                        src="./img/check-square.svg"
-                        alt="icon"
-                    />
-                </button>
+                Добавить
+                <img class="form__button-icon" src="./img/check-square.svg" alt="icon" />
+            </button>
         </form>
     </div>
     <!-- // Input form -->
@@ -161,7 +159,7 @@
     <!-- // Budget table -->
 
     <!-- Тестовые данные -->
-    <!-- <script src="js/test-data.js"></script> -->
+    <script src="js/test-data.js"></script>
 
     <!-- Модули приложения -->
     <script src="js/model.js"></script>
