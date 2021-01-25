@@ -1,4 +1,5 @@
 let viewController = (function() {
+<<<<<<< HEAD
     let DOMstrings = {
         inputName:"#fio",
         inputNumber:"#number",
@@ -20,4 +21,7 @@ let viewController = (function() {
             return  DOMstrings;
         }
     }
+=======
+
+>>>>>>> 06111c3ac3e1cb27c497680a57797f830e162927
 })();
