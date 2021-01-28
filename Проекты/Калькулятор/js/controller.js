@@ -1,29 +1,33 @@
-let controller = (function(appCtrl, uiCtrl) {
-
-<<<<<<< HEAD
-
-    let DOM = uiCtrl.getDomStrings();
+let controller = (function(budgetCtrl, uiCtrl) {
+    //Функция прослушка
+    let setupEventListeners = function() {
+        let DOM = uiCtrl.getDomStrings();
+        //Получаем кнопку и накидывает обработчик события
+        document.querySelector(DOM.form).addEventListener('submit', ctrlAddRequest);
+    }
 
     //Функция срабатывает при отправке формы
     function ctrlAddRequest(event) {
         event.preventDefault();
         console.log('fired');
-
+        //Получаем данные из формы
         let input = uiCtrl.getInput();
         console.log(input);
 
+        let newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+        budgetCtrl.test();
     }
-    //Получаем кнопку и накидывает обработчик события
-    document.querySelector(DOM.form).addEventListener('submit', ctrlAddRequest);
-=======
-    function ctrlAddRequest(event) {
-        event.preventDefault();
-        console.log('fired')
+
+    return {
+        init: function() {
+            console.log('App started');
+            setupEventListeners();
+        }
     }
-    //Получаем кнопку и накидывает обработчик события
-    document.querySelector('#budget-form').addEventListener('submit', ctrlAddRequest);
->>>>>>> 06111c3ac3e1cb27c497680a57797f830e162927
+
 })(
     //Передаем модель и шаблон
     modelController, viewController
 );
+
+controller.init();

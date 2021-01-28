@@ -1,27 +1,27 @@
 let viewController = (function() {
-<<<<<<< HEAD
     let DOMstrings = {
-        inputName:"#fio",
-        inputNumber:"#number",
-        inputEmail:"#email",
-        form:"#request-form"
+        form: "#request-form",
+        inputName: "#fio",
+        inputNumber: "#number",
+        inputEmail: "#email",
+        inputSelector: "#exampleFormControlSelect1"
+
+    }
+
+    function getInput() {
+        return {
+            name: document.querySelector(DOMstrings.inputName).value,
+            phone: document.querySelector(DOMstrings.inputNumber).value,
+            mail: document.querySelector(DOMstrings.inputEmail).value,
+            cours: document.querySelector(DOMstrings.inputSelector).value
+        }
     }
 
     return {
-        getInput:function(){
-            return{
-                name:document.querySelector('#fio').value,
-                telephone:document.querySelector('#number').value,
-                email:document.querySelector('#email').value,
-                product:document.querySelector('#exampleFormControlSelect1').value
-            }
-        },
-
-        getDomStrings:function(){
-            return  DOMstrings;
+        getInput: getInput,
+        // возвращаем id элементов формы
+        getDomStrings: function() {
+            return DOMstrings;
         }
     }
-=======
-
->>>>>>> 06111c3ac3e1cb27c497680a57797f830e162927
 })();
